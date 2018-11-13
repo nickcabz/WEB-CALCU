@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<style>
+ 	 button {height:80%;
+ 	 		width:76%;
+ 	 		cursor: pointer;
+	  		border-radius: 50%;
+	  		outline: none;
+	  		font-size:20px;}
+
+ 	 table{background-color:#2E4053  ;
+ 	 		border-radius:15px;}
+
+ 	 #num{width:94%;
+ 	 		height:50px;
+ 	 		text-align: right;
+ 	 		font-size: 45px}
+
+ 	 button:hover{background-color:red;}
+
+ 	 h2{color:white;
+ 	 	font-family: georgia;}
+
+
+
+
+
+
+
+
+ 	</style>
+ 	
+
+
+ </head>
+  <body>
+
+  	
+  	<table height='400px' width='400px'>
+      <tr>
+  	  <th colspan='4'><h2>Calculator</h2></th>
+	  </tr>
+	  <tr>
+	  <th colspan='4' ><input type="text" id="num" ></th>
+	  </tr>
+	  <tr></tr>
+	  <tr>
+	  <th><button onclick="seven()">7</button></th>
+	  <th><button onclick="eight()">8</button></th>
+	  <th><button onclick="nine()">9</button></th>
+	  <th><button onclick="divide()">/</button></th>
+	  </tr>	
+	  <tr>
+	  <th><button onclick="four()">4</button></th>
+	  <th><button onclick="five()">5</button></th>
+	  <th><button onclick="six()">6</button></th>
+	  <th><button onclick="times()">*</button></th>
+	  </tr>
+	  <tr>
+	  <th><button onclick="one()">1</button></th>
+	  <th><button onclick="two()">2</button></th>
+	  <th><button onclick="three()">3</button></th>
+	  <th><button onclick="minus()">-</button></th>
+	  </tr>
+	  <tr>
+	  <th><button onclick="reset()">C</button></th>
+	  <th><button onclick="zero()">0</button></th>
+	  <th><button onclick="equals()">=</button></th>
+	  <th><button onclick="add()">+</button></th>
+	  </tr>
+	  <tr></tr>
+	  
+	 </table>
+
+	 <script type="text/javascript">
+		  
+		  let n2 = 0;
+		  let operator= "";
+		  
+		  function add(){
+			n2 = document.getElementById("num").value;
+			document.getElementById("num").value = "";
+			operator= "+";
+			}
+		  function minus(){
+			n2 = document.getElementById("num").value;
+			document.getElementById("num").value = "";
+				operator= "-";
+			}
+		  
+		    function times(){
+			n2 = document.getElementById("num").value;
+			document.getElementById("num").value = "";
+			operator= "*";
+		}
+
+			 function divide(){
+			n2 = document.getElementById("num").value;
+			document.getElementById("num").value = "";
+			operator= "/";}
+
+			function reset(){
+				n2 = "";
+				document.getElementById("num").value = ""
+				operator = "";}
+		
+		  
+		  
+		  
+
+
+
+		  function equals(){
+
+		  	if(operator == "+"){
+		    let n1 = document.getElementById("num").value;
+		    document.getElementById("num").value = parseInt(n1) + parseInt(n2);
+			}
+
+			else if(operator == "-"){
+		    let n1 = document.getElementById("num").value;
+		    document.getElementById("num").value = parseInt(n2) - parseInt(n1);
+			}
+
+		    else if(operator == "*"){
+		    let n1 = document.getElementById("num").value;
+		    document.getElementById("num").value = parseInt(n1) * parseInt(n2);
+		}
+
+		    else if (operator == "/"){
+		    let n1 = document.getElementById("num").value;
+		    document.getElementById("num").value = parseInt(n2) / parseInt(n1);
+		 
+			}
+		}
+
+
+
+		  
+		  function one(){
+			document.getElementById("num").value += 1;}
+		  
+		  function two(){
+		    document.getElementById("num").value += 2;}
+
+		  function three(){
+		    document.getElementById("num").value += 3;}
+
+		    function four(){
+		    document.getElementById("num").value += 4;}
+
+		    function five(){
+		    document.getElementById("num").value += 5;}
+
+		    function six(){
+		    document.getElementById("num").value += 6;}
+
+		    function seven(){
+		    document.getElementById("num").value += 7;}
+
+		    function eight(){
+		    document.getElementById("num").value += 8;}
+
+		    function nine(){
+		    document.getElementById("num").value += 9;}
+
+		  
+	  </script>
+
+
+
+	  
+  </body>
+</html>
